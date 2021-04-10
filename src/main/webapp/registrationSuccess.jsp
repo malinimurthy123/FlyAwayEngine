@@ -16,6 +16,5 @@ color: Blue;
 <h1 style="color: dodgerblue;">Member Login successfully Registered !</h1>
 <a href="login">Click Here To Login</a>
 
-
 </body>
 </html>
