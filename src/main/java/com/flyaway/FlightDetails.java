@@ -26,11 +26,8 @@ public class FlightDetails extends HttpServlet {
 
     }
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-
-
         String source=request.getParameter("source");
         String destination=request.getParameter("destination");
         int travellers=Integer.parseInt(request.getParameter("travellers"));
@@ -69,10 +66,8 @@ public class FlightDetails extends HttpServlet {
         String date=request.getParameter("date");
         flightdetail flight=new flightdetail(source,destination,travellers,date);
 
-
         Session session= HibernateUtil.getSessionFactory().openSession();
         Transaction tx=session.beginTransaction();
-
 
         // using HQL
         List<flightdetail> listFlight = session.createQuery("from flightdetail", flightdetail.class).getResultList();

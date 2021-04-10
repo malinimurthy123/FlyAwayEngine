@@ -7,7 +7,6 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class FlightDAO {
-
     /**
      * Get all Flights
      * @return
